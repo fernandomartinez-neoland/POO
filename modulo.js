@@ -28,6 +28,7 @@ operaciones.multiplicacion();
 operaciones.division();
 
 
+// aunque se llame a la misma clase, el "new" hace referencia a que se esta creando un nuevo objeto con el mismo molde (misma clase), con lo cual, aunque se comporten de manera similar siguen siendo 2 objetos individuales
 const nuevaO= new Operaciones(1, 2);
 
 nuevaO.suma()
