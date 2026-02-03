@@ -30,6 +30,7 @@ export class Operaciones{
     }
 
 suma(){
+    
     console.log(this.numA+this.numB)
 }
 

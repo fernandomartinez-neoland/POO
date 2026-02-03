@@ -26,3 +26,8 @@ operaciones.resta();
 operaciones.multiplicacion();
 
 operaciones.division();
+
+
+const nuevaO= new Operaciones(1, 2);
+
+nuevaO.suma()
