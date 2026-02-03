@@ -45,6 +45,8 @@ export class Operaciones {
   }
 }
 
+
+//////////////////////// herencia
 export class Usuario extends Telefono {
   usar() {
     console.log("estoy usando el metodo 'usar()' del hijo")
@@ -52,4 +54,32 @@ export class Usuario extends Telefono {
     // "this" generalmetne se usa para acceder a las variables y metodos de la clase en la que nos encontramos, pero si esta clase es una clase "hijo", es decir que extiende (extends) de una clase padre entonces "this" se usa tambien para acceder a las variables y metodos de la clase padre
     this.llamada()
   }
+}
+
+/////////////////
+
+export class Precibidor {
+    constructor(nombre, apellido){
+        this.nombre=nombre;
+        this.apellido=apellido;
+    }
+
+    nombreHijo(){
+        console.log("el nombre de mi hijo es: "+this.nombre+" "+this.apellido)
+    }
+}
+
+export class Hrecibidor extends Precibidor{
+    constructor(nombre,apellido){
+        // en este ejemplo la clase Hrecibidor(hijo) recibe 2 parametros y con la palabra "super" le envia esos 2 parametros al padre (Precibidiro) y este los recibe en su propio constructor
+        super(nombre, apellido)
+        
+    }
+    
+
+    nombrar(){
+        console.log("hola")
+        this.nombreHijo()
+    }
+
 }

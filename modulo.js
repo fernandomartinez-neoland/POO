@@ -1,4 +1,4 @@
-import { Telefono, Parametro, Operaciones, Usuario } from "./clases.js";
+import { Telefono, Parametro, Operaciones, Usuario, Hrecibidor } from "./clases.js";
 
 // con esto creamos un nuevo objeto de tipo "telefono" el cual previamente lo creamos desde clases.js, este no representa directamente el objeto, mas bien una copia
 const objeto= new Telefono();
@@ -33,7 +33,12 @@ const nuevaO= new Operaciones(1, 2);
 
 nuevaO.suma()
 
+////////////////////herencia
 const persona= new Usuario();
 // durante el uso de los metodos podemos acceder a los metodos del padre desde el uso de la clase del hijo, osea que si el hijo NO posee el metodo pero el padre si, entonces accedemos al metodo del padre usando al hijo.
 persona.llamada();
 persona.usar();
+
+///////////
+const hijo= new Hrecibidor("fernando", "martinez");
+hijo.nombrar();
